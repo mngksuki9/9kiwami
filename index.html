@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎙️よしもと漫才劇場翔 好き顔9選🎙️</title>
+  <title>🎙️よしもと漫才劇場極 好き顔9選🎙️</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -43,7 +43,7 @@
 
     /* 進捗バー */
     .progress-wrapper {
-      display: none; /* スタート画面では非表示 */
+      display: none;
     }
     .progress-info {
       display: flex;
@@ -399,7 +399,7 @@
 <body>
 
   <header>
-    <h1>🎙️よしもと漫才劇場翔 好き顔9選🎙️</h1>
+    <h1>🎙️よしもと漫才劇場極 好き顔9選🎙️</h1>
     <div class="phase-badge" id="phase-badge">START</div>
     <div class="progress-wrapper" id="progress-wrapper">
       <div class="progress-info">
@@ -417,7 +417,7 @@
     <div class="info-card">
       <h2>🎙️予選</h2>
       <p>
-        全35画面<br>
+        全25画面<br>
         表示されたメンバーの中から、<br>
         顔が好きな人を選んでね。複数選択OK！
       </p>
@@ -428,7 +428,7 @@
         <details>
           <summary>▶︎対象メンバー・このサイトについて</summary>
           <div class="details-content">
-            対象は2026年9月時点でのよしもと漫才劇場翔メンバー。吉本興業公式HPよりお写真をお借りしておりますが、ファンによる非公式ソートの為吉本興業および各権利者とは関係ございません。製作者X@Er_0038連絡はこちらまでお願い致します。
+            対象は2026年9月時点でのよしもと漫才劇場極メンバー。吉本興業公式HPよりお写真をお借りしておりますが、ファンによる非公式ソートの為吉本興業および各権利者とは関係ございません。製作者X@Er_0038連絡はこちらまでお願い致します。
           </div>
         </details>
       </div>
@@ -499,107 +499,110 @@
   </div>
 
   <script>
-    const TITLE_TEXT = "🎙️よしもと漫才劇場翔 好き顔9選🎙️";
+    const TITLE_TEXT = "🎙️よしもと漫才劇場極 好き顔9選🎙️";
 
+    // よしもと漫才劇場 極 メンバー（全100名）
     const rawCandidates = [
-      { combi: "アポロ軍曹", name: "かりむ", img: "karimu.jpg" },
-      { combi: "アポロ軍曹", name: "田中", img: "tanaka_a.jpg" },
-      { combi: "cacao", name: "高橋", img: "takahashi.jpg" },
-      { combi: "cacao", name: "浦田スターク", img: "urata.jpg" },
-      { combi: "cacao", name: "たっぺい", img: "tape.jpg" },
-      { combi: "コブラマン", name: "マサキ", img: "masaki.jpg" },
-      { combi: "コブラマン", name: "別府ジカキン", img: "jika.jpg" },
-      { combi: "ごぞうろっぷ", name: "ゆう", img: "yu.jpg" },
-      { combi: "ごぞうろっぷ", name: "ソウタヤマモト", img: "souta.jpg" },
-      { combi: "三遊間", name: "稲継諒", img: "ina.jpg" },
-      { combi: "三遊間", name: "さくらい", img: "sakurai.jpg" },
-      { combi: "シャガール", name: "弓月一日", img: "yuzuki.jpg" },
-      { combi: "シャガール", name: "きらく", img: "kiraku.jpg" },
-      { combi: "タイムキーパー", name: "まついあきら", img: "matsui.jpg" },
-      { combi: "タイムキーパー", name: "ひでき", img: "hideki.jpg" },
-      { combi: "ときヲりぴーと", name: "ときヲ", img: "tokiwo.jpg" },
-      { combi: "ときヲりぴーと", name: "りぴーと", img: "ripi.jpg" },
-      { combi: "どんちっち", name: "青木智紀", img: "aoki.jpg" },
-      { combi: "どんちっち", name: "竹岡航太", img: "takeoka.jpg" },
-      { combi: "半年記念日", name: "あると", img: "aruto.jpg" },
-      { combi: "半年記念日", name: "YOSH!NO", img: "yoshino.jpg" },
-      { combi: "ファンファーレと熱狂", name: "こうちゃん", img: "kouchan.jpg" },
-      { combi: "ファンファーレと熱狂", name: "奥慎太郎", img: "oku.jpg" },
-      { combi: "オニイチャン", name: "府上ふが", img: "fugami.jpg" },
-      { combi: "オニイチャン", name: "こんちゃん", img: "konchan.jpg" },
-      { combi: "空前メテオ", name: "茶屋", img: "chaya.jpg" },
-      { combi: "空前メテオ", name: "大門正尚", img: "daimon.jpg" },
-      { combi: "ぐろう", name: "家村涼太", img: "iemura.jpg" },
-      { combi: "ぐろう", name: "高松巧", img: "takamatsu.jpg" },
-      { combi: "シスター", name: "週末", img: "shuumatsu.jpg" },
-      { combi: "シスター", name: "井坂ひ孫", img: "isaka.jpg" },
-      { combi: "ジョックロック", name: "福本ユウショウ", img: "fukumoto.jpg" },
-      { combi: "ジョックロック", name: "ゆうじろー", img: "yujiro.jpg" },
-      { combi: "マーメイド", name: "田村境祐", img: "tamura.jpg" },
-      { combi: "マーメイド", name: "テクニック。", img: "teku.jpg" },
-      { combi: "ライムギ", name: "なつみ", img: "natsumi.jpg" },
-      { combi: "ライムギ", name: "れんぺい", img: "renpei.jpg" },
-      { combi: "オーケストラ", name: "石井勝太郎", img: "ishii.jpg" },
-      { combi: "オーケストラ", name: "河野拳也", img: "kouno.jpg" },
-      { combi: "キョンビ", name: "斎藤", img: "saitou.jpg" },
-      { combi: "キョンビ", name: "ナカジマ", img: "nakujima.jpg" },
-      { combi: "九ノ段", name: "宮田祐輔", img: "miyata.jpg" },
-      { combi: "九ノ段", name: "児島クソデカおにく", img: "kojima.jpg" },
-      { combi: "シカノシンプ", name: "北川", img: "kitagawa.jpg" },
-      { combi: "シカノシンプ", name: "ゆのき", img: "yunoki.jpg" },
-      { combi: "例えば炎", name: "タキノルイ", img: "takinorui.jpg" },
-      { combi: "例えば炎", name: "田上", img: "tanoue.jpg" },
-      { combi: "電気ジュース", name: "福沢葉", img: "fukuzawa.jpg" },
-      { combi: "電気ジュース", name: "藤本もふ", img: "fujimoto.jpg" },
-      { combi: "天ロクの丘", name: "奥野賢一", img: "okuno.jpg" },
-      { combi: "天ロクの丘", name: "馬田バジリスク", img: "umada.jpg" },
-      { combi: "ドライブドライブ", name: "八旗遼", img: "yahata.jpg" },
-      { combi: "ドライブドライブ", name: "田中祐輝", img: "tanaka_d.jpg" },
-      { combi: "マーティー", name: "真平", img: "shinpei.jpg" },
-      { combi: "マーティー", name: "ホソ", img: "hoso.jpg" },
-      { combi: "宛先プレーン", name: "荒木健太", img: "araki.jpg" },
-      { combi: "宛先プレーン", name: "たかまん", img: "takaman.jpg" },
-      { combi: "釈迦虎", name: "岡本峻", img: "okamota.jpg" },
-      { combi: "釈迦虎", name: "久保バトル泰志", img: "kubo.jpg" },
-      { combi: "彼岸花", name: "坂本拓馬", img: "sakamoto.jpg" },
-      { combi: "彼岸花", name: "田中雄大", img: "tanaka_h.jpg" },
-      { combi: "満丸", name: "統哉", img: "touya.jpg" },
-      { combi: "満丸", name: "巻野", img: "makino.jpg" },
-      { combi: "ミケネ系", name: "べっち", img: "beti.jpg" },
-      { combi: "ミケネ系", name: "吉田ザオリク", img: "yoshida.jpg" },
-      { combi: "ミステリーハンター", name: "上木", img: "ueki.jpg" },
-      { combi: "ミステリーハンター", name: "芝", img: "shiba.jpg" },
-      { combi: "あんよの日", name: "やまち", img: "yamachi.jpg" },
-      { combi: "あんよの日", name: "朱海", img: "chuna.jpg" },
-      { combi: "遠足ダイスキタイム", name: "たつ", img: "tatsu.jpg" },
-      { combi: "遠足ダイスキタイム", name: "トン吉", img: "tonkichi.jpg" },
-      { combi: "東雲", name: "細見 晃", img: "hosomi.jpg" },
-      { combi: "東雲", name: "かおる", img: "kaoru.jpg" },
-      { combi: "生姜猫", name: "川﨑", img: "kawasaki.jpg" },
-      { combi: "生姜猫", name: "ケージュ", img: "keju.jpg" },
-      { combi: "生姜猫", name: "カンサイ", img: "kansai.jpg" },
-      { combi: "入学卒業", name: "にーはら", img: "niihara.jpg" },
-      { combi: "入学卒業", name: "鳴瀬", img: "naruse.jpg" },
-      { combi: "野良レール", name: "やまぐち", img: "yamaguchi.jpg" },
-      { combi: "野良レール", name: "てすけ", img: "tesuke.jpg" },
-      { combi: "バリアシオン", name: "大津尚斗", img: "otsu.jpg" },
-      { combi: "バリアシオン", name: "飛田翼", img: "tobita.jpg" },
-      { combi: "はるかぜに告ぐ", name: "とんず", img: "tonzu.jpg" },
-      { combi: "はるかぜに告ぐ", name: "花妃", img: "hanabi.jpg" },
-      { combi: "シンボリル", name: "かみむら", img: "kamimura.jpg" },
-      { combi: "シンボリル", name: "高田純", img: "takata.jpg" },
-      { combi: "おもしろジャンケン", name: "その他しょうたろう", img: "sonota.jpg" },
-      { combi: "おもしろジャンケン", name: "嘉津じゃない方", img: "katsujanai.jpg" },
-      { combi: "おもしろジャンケン", name: "嘉津翔太", img: "katsu.jpg" },
-      { combi: "ちあき", name: "金井", img: "kanai.jpg" },
-      { combi: "ちあき", name: "小倉", img: "ogura.jpg" },
-      { combi: "ゆくえ", name: "浅原康太", img: "asahara.jpg" },
-      { combi: "ゆくえ", name: "井ノ口たまご", img: "tamago.jpg" },
-      { combi: "グゴゴ0.9", name: "良心", img: "ryoushin.jpg" },
-      { combi: "グゴゴ0.9", name: "友人", img: "yuujin.jpg" },
-      { combi: "ピン", name: "西野", img: "nishino.jpg" },
-      { combi: "ピン", name: "清川雄司", img: "kiyokawa.jpg" },
-      { combi: "ピン", name: "岡田浩太朗", img: "okada.jpg" }
+      { combi: "アイラブ地球", name: "きむきむ", img: "kimukimu.jpg" },
+      { combi: "アイラブ地球", name: "コウノ・オブ・ザ・イヤー", img: "kono.jpg" },
+      { combi: "牛ペペ", name: "ゆたか", img: "yutaka.jpg" },
+      { combi: "牛ペペ", name: "おねえちゃん", img: "one.jpg" },
+      { combi: "黒帯", name: "大西進", img: "onishi.jpg" },
+      { combi: "黒帯", name: "てらうち", img: "terauchi.jpg" },
+      { combi: "超速バギー", name: "ハマムラ", img: "hamamura.jpg" },
+      { combi: "超速バギー", name: "アキラ", img: "akira_buggy.jpg" },
+      { combi: "超速バギー", name: "明里 洋輔", img: "akari.jpg" },
+      { combi: "武者武者", name: "杉岡勇治", img: "sugioka.jpg" },
+      { combi: "武者武者", name: "濱坂恭平", img: "hamasaka.jpg" },
+      { combi: "モンスーン", name: "小山英機", img: "koyama.jpg" },
+      { combi: "モンスーン", name: "T＠TSU", img: "tatsu_m.jpg" },
+      { combi: "ザ・布団", name: "江原", img: "ebara.jpg" },
+      { combi: "ザ・布団", name: "TNB", img: "tnb.jpg" },
+      { combi: "しゅんすけ", name: "さかもと", img: "sakamoto_s.jpg" },
+      { combi: "しゅんすけ", name: "ほりお", img: "horio.jpg" },
+      { combi: "ネイビーズアフロ", name: "みながわ", img: "minagawa.jpg" },
+      { combi: "ネイビーズアフロ", name: "はじり", img: "hajiri.jpg" },
+      { combi: "鬼としみちゃむ", name: "しみちゃむ", img: "shimichamu.jpg" },
+      { combi: "鬼としみちゃむ", name: "鬼沢さん", img: "kizawa.jpg" },
+      { combi: "華山", name: "やすい", img: "yasui.jpg" },
+      { combi: "華山", name: "にこらす", img: "nikorasu.jpg" },
+      { combi: "侍スライス", name: "加藤", img: "katou_slice.jpg" },
+      { combi: "侍スライス", name: "門田", img: "kadota.jpg" },
+      { combi: "スナフキンズ", name: "松永ボディ", img: "matsunaga.jpg" },
+      { combi: "スナフキンズ", name: "朝地亮介", img: "asaji.jpg" },
+      { combi: "-ZX-", name: "伊藤", img: "itou_zx.jpg" },
+      { combi: "-ZX-", name: "ひかる", img: "hikaru_zx.jpg" },
+      { combi: "センリーズ", name: "テコンドー近藤", img: "teko.jpg" },
+      { combi: "センリーズ", name: "きたしろ", img: "kitashiro.jpg" },
+      { combi: "ビーンズ", name: "ひらがだぬき", img: "hiraga.jpg" },
+      { combi: "ビーンズ", name: "おいちょ", img: "oicho.jpg" },
+      { combi: "隣人", name: "中村遊直", img: "nakamura_r.jpg" },
+      { combi: "隣人", name: "橋本市民球場", img: "hashimoto_r.jpg" },
+      { combi: "茜250㏄", name: "小泉", img: "koizumi.jpg" },
+      { combi: "茜250㏄", name: "善家カズマサ", img: "zenke.jpg" },
+      { combi: "イノシカチョウ", name: "関本", img: "sekimoto.jpg" },
+      { combi: "イノシカチョウ", name: "純吉", img: "junkichi.jpg" },
+      { combi: "イノシカチョウ", name: "ムギ", img: "mugi.jpg" },
+      { combi: "ナナ", name: "大二", img: "daiji.jpg" },
+      { combi: "ナナ", name: "山根リチャード", img: "yamane.jpg" },
+      { combi: "もも", name: "まもる。", img: "mamoru.jpg" },
+      { combi: "もも", name: "せめる。", img: "semeru.jpg" },
+      { combi: "イチオク", name: "タケヤ", img: "takeya.jpg" },
+      { combi: "イチオク", name: "ないすケン", img: "niceken.jpg" },
+      { combi: "オーサカクレオパトラ", name: "かつのぶさん", img: "katsunobusan.jpg" },
+      { combi: "オーサカクレオパトラ", name: "りえちゃん", img: "riechan.jpg" },
+      { combi: "カンフーカンフー", name: "チェン", img: "chen.jpg" },
+      { combi: "カンフーカンフー", name: "キムリョンス", img: "kimuryonsu.jpg" },
+      { combi: "豪快キャプテン", name: "べーやん", img: "beyan.jpg" },
+      { combi: "豪快キャプテン", name: "山下ギャンブルゴリラ", img: "gorilla.jpg" },
+      { combi: "ドーナツ・ピーナツ", name: "ピーナツ", img: "peanuts.jpg" },
+      { combi: "ドーナツ・ピーナツ", name: "ドーナツ", img: "donuts.jpg" },
+      { combi: "盆と正月", name: "ほしあられ", img: "hoshiare.jpg" },
+      { combi: "盆と正月", name: "橋爪アキラ", img: "hashizume.jpg" },
+      { combi: "ポチ", name: "こうたろう", img: "koutarou_p.jpg" },
+      { combi: "ポチ", name: "茜チーフ", img: "akane_chief.jpg" },
+      { combi: "丸亀じゃんご", name: "北村敏輝", img: "kitamura.jpg" },
+      { combi: "丸亀じゃんご", name: "安場泰介", img: "yasuba.jpg" },
+      { combi: "翠星チークダンス", name: "ちろる", img: "chiroru.jpg" },
+      { combi: "翠星チークダンス", name: "木佐", img: "kisa.jpg" },
+      { combi: "千日前ゴールデンポップス", name: "村岡わっしょい！", img: "muraoka.jpg" },
+      { combi: "千日前ゴールデンポップス", name: "ガーヤマちゃん", img: "gayama.jpg" },
+      { combi: "チェリー大作戦", name: "ねんど", img: "nendo.jpg" },
+      { combi: "チェリー大作戦", name: "宗安聖", img: "muneyasu.jpg" },
+      { combi: "愛凛冴", name: "横山", img: "yokoyama.jpg" },
+      { combi: "愛凛冴", name: "玲二", img: "reiji.jpg" },
+      { combi: "天才ピアニスト", name: "竹内知咲", img: "takeuchi.jpg" },
+      { combi: "天才ピアニスト", name: "ますみ", img: "masumi.jpg" },
+      { combi: "フースーヤ", name: "田中ショータイム", img: "show.jpg" },
+      { combi: "フースーヤ", name: "谷口理", img: "taniguchi.jpg" },
+      { combi: "いつもたいしゃ", name: "シンジ君", img: "shinji.jpg" },
+      { combi: "いつもたいしゃ", name: "黒田", img: "kuroda.jpg" },
+      { combi: "うただ", name: "一石達也", img: "ichiishi.jpg" },
+      { combi: "うただ", name: "宮本", img: "miyamoto.jpg" },
+      { combi: "ぎょうぶ", name: "為国", img: "tamekuni.jpg" },
+      { combi: "ぎょうぶ", name: "澤畑健二", img: "sawahata.jpg" },
+      { combi: "タチマチ", name: "安達周平", img: "adachi.jpg" },
+      { combi: "タチマチ", name: "胡内佑介", img: "kouchi.jpg" },
+      { combi: "タレンチ", name: "芝田大輝", img: "shibata.jpg" },
+      { combi: "タレンチ", name: "コバタユウ", img: "kobatayuu.jpg" },
+      { combi: "とくいち", name: "大野", img: "oono.jpg" },
+      { combi: "とくいち", name: "西垣", img: "nishigaki.jpg" },
+      { combi: "とくいち", name: "あさやまんちゃんランド", img: "asayaman.jpg" },
+      { combi: "爛々", name: "萌々", img: "momo_r.jpg" },
+      { combi: "爛々", name: "大国麗", img: "ookuni.jpg" },
+      { combi: "ルージュ", name: "ソースかける", img: "sauce.jpg" },
+      { combi: "ルージュ", name: "田中昭太", img: "tanakashouta.jpg" },
+      { combi: "幸のとり", name: "福嶋一夫", img: "fukushima.jpg" },
+      { combi: "幸のとり", name: "永迫拓海", img: "nagasako.jpg" },
+      { combi: "国道アリス", name: "かとうスムージー", img: "katou_smoothie.jpg" },
+      { combi: "国道アリス", name: "コヤマダ", img: "koyamada.jpg" },
+      { combi: "ピン", name: "アシダヒモビッチ", img: "ashida.jpg" },
+      { combi: "ピン", name: "苺ちゃん", img: "ichigochan.jpg" },
+      { combi: "ピン", name: "しげ", img: "shige.jpg" },
+      { combi: "ピン", name: "濱田祐太郎", img: "hamadayu.jpg" },
+      { combi: "ピン", name: "やまぐちたけし", img: "yamatake.jpg" },
+      { combi: "ピン", name: "ゆりやんレトリィバァ", img: "yuriyan.jpg" },
+      { combi: "ピン", name: "真輝志", img: "makishi.jpg" }
     ];
 
     // 予選ステート
@@ -609,7 +612,6 @@
     let selectedIndices = new Set();
     let final36 = [];
 
-    // 予選開始ボタンを押した時の処理
     function startPrelim() {
       document.getElementById('start-view').style.display = 'none';
       document.getElementById('prelim-view').style.display = 'block';
@@ -844,10 +846,10 @@
         grid.appendChild(itemEl);
       });
 
-      // X共有用テキスト
+      // X共有用テキスト（極仕様）
       const siteUrl = window.location.href;
       const top3Text = `🥇1位: ${top9[0].name} (${top9[0].combi})\n🥈2位: ${top9[1].name} (${top9[1].combi})\n🥉3位: ${top9[2].name} (${top9[2].combi})`;
-      const shareContent = `${TITLE_TEXT}\n\n私のベスト3はこちら！\n${top3Text}\n\n▼あなたの好き顔9選を作ってみよう\n${siteUrl}\n\n#マンゲキ翔好き顔9選`;
+      const shareContent = `${TITLE_TEXT}\n\n私のベスト3はこちら！\n${top3Text}\n\n▼あなたの好き顔9選を作ってみよう\n${siteUrl}\n\n#マンゲキ極好き顔9選`;
 
       document.getElementById('share-text').value = shareContent;
       document.getElementById('btn-x-link').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareContent)}`;
@@ -887,7 +889,7 @@
       const target = document.getElementById('capture-area');
       html2canvas(target, { scale: 2, useCORS: true }).then(canvas => {
         const a = document.createElement('a');
-        a.download = 'suki-kao-9.png';
+        a.download = 'suki-kao-9-kiwami.png';
         a.href = canvas.toDataURL('image/png');
         a.click();
       });
